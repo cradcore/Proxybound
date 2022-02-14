@@ -140,11 +140,11 @@ int main(int argc, char *argv[]) {
 	size_t i;
 	const char *prefix = NULL;
 
-    if (argc != 2 || !strcmp(argv[1], "-h") || !strcmp(argv[1], "--help")) {
+    if (argc < 1 || !strcmp(argv[1], "-h") || !strcmp(argv[1], "--help")) {
         return usage(argv);
     }
     
-    if (argc != 2 || !strcmp(argv[1], "-v") || !strcmp(argv[1], "--version")) {
+    if (!strcmp(argv[1], "-v") || !strcmp(argv[1], "--version")) {
         return version(argv);
     }
     
